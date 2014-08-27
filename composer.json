@@ -33,7 +33,8 @@
         "mathiasverraes/money":                 "@dev",
         "pagerfanta/pagerfanta":                "@dev",
         "white-october/pagerfanta-bundle":      "@dev",
-        "friendsofsymfony/oauth-server-bundle": "@dev"
+        "friendsofsymfony/oauth-server-bundle": "@dev",
+        "sensio/generator-bundle": "*@dev"
     },
     "require-dev": {
         "behat/behat":                       "~3.0",
