@@ -1,3 +1,7 @@
 app_web_homepage:
     path:     /hello/{name}
     defaults: { _controller: AppWebBundle:Default:index }
+
+app_backend:
+    resource: @AppWebBundle/Resources/config/routing/backend/main.yml
+    prefix: /administration

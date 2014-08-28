@@ -1,0 +1,29 @@
+app_backend_vendor_index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: app.controller.vendor:indexAction
+
+app_backend_vendor_create:
+    pattern: /new
+    methods: [GET, POST]
+    defaults:
+        _controller: app.controller.vendor:createAction
+        _sylius:
+            redirect: app_backend_vendor_update
+
+app_backend_vendor_update:
+    pattern: /{id}/edit
+    methods: [GET, PUT, POST]
+    defaults:
+        _controller: app.controller.vendor:updateAction
+        _sylius:
+            redirect: app_backend_vendor_update
+
+app_backend_vendor_delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: app.controller.vendor:deleteAction
+        _sylius:
+            redirect: app_backend_vendor_index
