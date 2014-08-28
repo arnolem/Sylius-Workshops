@@ -1,5 +1,5 @@
 services:
     app.form.type.vendor:
-        class: App\Bundle\CoreBundle\Form\Type\VendorType
+        class: App\Bundle\CoreBundle\Form\VendorType
         tags:
             - { name: form.type, alias: app_vendor }
