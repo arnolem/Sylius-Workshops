@@ -1,0 +1,9 @@
+App\Bundle\CoreBundle\Entity\Product:
+    type: entity
+    table: sylius_product
+    manyToOne:
+        vendor:
+            targetEntity: App\Bundle\CoreBundle\Entity\Vendor
+            joinColumn:
+                name: vendor_id
+                referencedColumnName: id
