@@ -80,3 +80,8 @@ sylius_resource:
             templates: AppWebBundle:Backend/Vendor
             classes:
                 model: App\Bundle\CoreBundle\Entity\Vendor
+
+sylius_product:
+    classes:
+        product:
+            model: App\Bundle\CoreBundle\Entity\Product
