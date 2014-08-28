@@ -1,0 +1,53 @@
+{% extends 'SyliusWebBundle:Backend:layout.html.twig' %}
+
+{% from 'SyliusWebBundle:Backend/Macros:misc.html.twig' import pagination %}
+{% import 'SyliusResourceBundle:Macros:buttons.html.twig' as buttons %}
+{% import 'SyliusWebBundle:Backend/Macros:alerts.html.twig' as alerts %}
+
+{% block topbar %}
+<ol class="breadcrumb">
+    <li>{{ 'sylius.breadcrumb.assortment'|trans }}</li>
+    <li>{{ 'Vendors'|trans }}</a></li>
+</ol>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <div class="actions-menu">
+        {{ buttons.create(path('app_backend_vendor_create'), 'Add vendor'|trans) }}
+    </div>
+    <h1><i class="glyphicon glyphicon-cog"></i> {{ 'Vendors'|trans|raw }}</h1>
+</div>
+
+{{ pagination(vendors) }}
+
+{% if vendors|length > 0 %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>{{ sylius_resource_sort('name') }}</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vendor in vendors %}
+            <tr id="{{ vendor.id }}">
+                <td>
+                    <strong>{{ vendor.name }}</strong>
+                    <p>{{ vendor.description }}</p>
+                </td>
+                <td>
+                    <div class="pull-right">
+                    {{ buttons.edit(path('app_backend_vendor_update', {'id': vendor.id})) }}
+                    {{ buttons.delete(path('app_backend_vendor_delete', {'id': vendor.id})) }}
+                   </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+{{ alerts.info('You have no vendors configured'|trans) }}
+{% endif %}
+
+{% endblock %}
