@@ -85,3 +85,4 @@ sylius_product:
     classes:
         product:
             model: App\Bundle\CoreBundle\Entity\Product
+            form: App\Bundle\CoreBundle\Form\ProductType
