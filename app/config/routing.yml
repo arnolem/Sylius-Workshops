@@ -3,7 +3,7 @@ app_core:
     prefix:   /
 
 app_web:
-    resource: "@AppWebBundle/Resources/config/routing.yml"
+    resource: "@AppWebBundle/Resources/config/_routing.yml"
     prefix:   /
 
 sylius_installer:

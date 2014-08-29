@@ -3,5 +3,5 @@ app_web_homepage:
     defaults: { _controller: AppWebBundle:Default:index }
 
 app_backend:
-    resource: @AppWebBundle/Resources/config/routing/backend/main.yml
+    resource: @AppWebBundle/Resources/config/routing/backend/_main.yml
     prefix: /administration
