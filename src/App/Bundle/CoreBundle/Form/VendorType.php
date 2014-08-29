@@ -17,6 +17,7 @@ class VendorType extends AbstractType
         $builder
             ->add('name')
             ->add('description', 'textarea')
+            ->add('address', 'sylius_address')
         ;
     }
 

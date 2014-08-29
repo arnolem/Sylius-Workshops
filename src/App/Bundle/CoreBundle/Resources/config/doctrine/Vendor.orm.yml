@@ -13,4 +13,11 @@ App\Bundle\CoreBundle\Entity\Vendor:
             length: 255
         description:
             type: text
+    manyToOne:
+        address:
+            targetEntity: Sylius\Component\Addressing\Model\AddressInterface
+            joinColumn:
+                name: address_id
+                referencedColumnName: id
+            cascade: ['all']
     lifecycleCallbacks: {  }

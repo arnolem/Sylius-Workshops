@@ -3,6 +3,7 @@
 namespace App\Bundle\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Sylius\Component\Addressing\Model\AddressInterface;
 
 /**
  * Vendor
@@ -24,6 +25,15 @@ class Vendor
      */
     private $description;
 
+    /**
+     * @var AddressInterface
+     */
+    private $address;
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 
     /**
      * Get id
@@ -79,5 +89,17 @@ class Vendor
     public function getDescription()
     {
         return $this->description;
+    }
+
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    public function setAddress(AddressInterface $address)
+    {
+        $this->address = $address;
+
+        return $this;
     }
 }
