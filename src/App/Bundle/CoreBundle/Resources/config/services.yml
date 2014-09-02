@@ -8,3 +8,7 @@ services:
         tags:
             - { name: kernel.event_listener, event: sylius.checkout.shipping.pre_complete, method: applyPackagingCharges }
             - { name: kernel.event_listener, event: sylius.cart_change, method: applyPackagingCharges }
+    app.shipping_calculator.api:
+        class: App\Bundle\CoreBundle\Shipping\Calculator\ExternalApiCalculator
+        tags:
+            - { name: sylius.shipping_calculator, calculator: api, label: External API }
