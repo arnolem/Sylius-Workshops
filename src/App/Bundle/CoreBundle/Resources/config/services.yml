@@ -3,3 +3,7 @@ services:
         class: App\Bundle\CoreBundle\Form\PackagingTypeType
         tags:
             - { name: form.type, alias: app_packaging_type }
+    app.listener.packaging_cost:
+        class: App\Bundle\CoreBundle\EventListener\PackagingCostListener
+        tags:
+            - { name: kernel.event_listener, event: sylius.checkout.shipping.pre_complete, method: applyPackagingCharges }
