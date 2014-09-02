@@ -1,0 +1,3 @@
+app_backend_packaging_type:
+    resource: @AppWebBundle/Resources/config/routing/backend/packaging_type.yml
+    prefix: /packaging-types

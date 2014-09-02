@@ -1,0 +1,29 @@
+app_backend_packaging_type_index:
+    pattern: /
+    methods: [GET]
+    defaults:
+        _controller: app.controller.packaging_type:indexAction
+
+app_backend_packaging_type_create:
+    pattern: /new
+    methods: [GET, POST]
+    defaults:
+        _controller: app.controller.packaging_type:createAction
+        _sylius:
+            redirect: app_backend_packaging_type_update
+
+app_backend_packaging_type_update:
+    pattern: /{id}/edit
+    methods: [GET, PUT, POST]
+    defaults:
+        _controller: app.controller.packaging_type:updateAction
+        _sylius:
+            redirect: app_backend_packaging_type_update
+
+app_backend_packaging_type_delete:
+    pattern: /{id}
+    methods: [DELETE]
+    defaults:
+        _controller: app.controller.packaging_type:deleteAction
+        _sylius:
+            redirect: app_backend_packaging_type_index
