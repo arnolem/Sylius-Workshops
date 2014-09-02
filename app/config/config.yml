@@ -80,3 +80,8 @@ sylius_resource:
             templates: AppWebBundle:Backend/PackagingType
             classes:
                 model: App\Bundle\CoreBundle\Entity\PackagingType
+
+sylius_order:
+    classes:
+        order:
+            model: App\Bundle\CoreBundle\Entity\Order

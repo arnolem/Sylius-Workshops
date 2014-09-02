@@ -1,0 +1,9 @@
+App\Bundle\CoreBundle\Entity\Order:
+    type: entity
+    table: sylius_order
+    manyToOne:
+        packagingType:
+            targetEntity: App\Bundle\CoreBundle\Entity\PackagingType
+            joinColumn:
+                name: packaging_type_id
+                referencedColumnName: id
