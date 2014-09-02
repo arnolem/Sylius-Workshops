@@ -1,0 +1,15 @@
+{% extends 'SyliusWebBundle:Backend:layout.html.twig' %}
+
+{% block content %}
+
+<form method="post" action="{{ path('app_backend_packaging_type_update', {'id': packaging_type.id}) }}" class="form-horizontal">
+    {{ form_row(form.name) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.price) }}
+    {{ form_row(form.enabled) }}
+    {{ form_row(form._token) }}
+
+    <input type="submit">
+</form>
+
+{% endblock %}

@@ -1,5 +1,5 @@
 services:
     app.form.type.packaging_type:
-        class: App\Bundle\CoreBundle\Form\Type\PackagingTypeType
+        class: App\Bundle\CoreBundle\Form\PackagingTypeType
         tags:
             - { name: form.type, alias: app_packaging_type }

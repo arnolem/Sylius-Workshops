@@ -1,0 +1,12 @@
+{% extends 'SyliusWebBundle:Backend:layout.html.twig' %}
+
+{% block content %}
+
+<hr>
+{% for packaging_type in packaging_types %}
+<strong>{{ packaging_type.name }}</strong> ({{ packaging_type.price|sylius_money }})<br>
+{% else %}
+    No packaging types!
+{% endfor %}
+
+{% endblock %}
