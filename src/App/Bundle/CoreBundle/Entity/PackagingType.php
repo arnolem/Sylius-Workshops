@@ -34,11 +34,16 @@ class PackagingType
      */
     private $enabled;
 
+    public function __toString()
+    {
+        return $this->name;
+    }
+
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -61,7 +66,7 @@ class PackagingType
     /**
      * Get name
      *
-     * @return string 
+     * @return string
      */
     public function getName()
     {
@@ -84,7 +89,7 @@ class PackagingType
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -107,7 +112,7 @@ class PackagingType
     /**
      * Get price
      *
-     * @return integer 
+     * @return integer
      */
     public function getPrice()
     {
@@ -130,7 +135,7 @@ class PackagingType
     /**
      * Get enabled
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getEnabled()
     {

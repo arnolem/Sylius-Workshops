@@ -3,6 +3,9 @@ imports:
     - { resource: security.yml }
     - { resource: @SyliusCoreBundle/Resources/config/app/main.yml }
 
+parameters:
+    sylius.checkout_form.shipping.class: App\Bundle\CoreBundle\Form\ShippingStepType
+
 framework:
     translator:      { fallback: %sylius.locale% }
     secret:          %sylius.secret%
