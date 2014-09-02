@@ -7,3 +7,4 @@ services:
         class: App\Bundle\CoreBundle\EventListener\PackagingCostListener
         tags:
             - { name: kernel.event_listener, event: sylius.checkout.shipping.pre_complete, method: applyPackagingCharges }
+            - { name: kernel.event_listener, event: sylius.cart_change, method: applyPackagingCharges }

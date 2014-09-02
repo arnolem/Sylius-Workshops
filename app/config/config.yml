@@ -88,3 +88,8 @@ sylius_order:
     classes:
         order:
             model: App\Bundle\CoreBundle\Entity\Order
+
+sylius_cart:
+    classes:
+        cart:
+            form: App\Bundle\CoreBundle\Form\CartType
