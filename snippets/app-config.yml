@@ -1,0 +1,13 @@
+sylius_resource:
+    resources:
+        app.vendor:
+            driver: doctrine/orm
+            templates: AppWebBundle:Backend/Vendor
+            classes:
+                model: App\Bundle\CoreBundle\Entity\Vendor
+
+sylius_product:
+    classes:
+        product:
+            model: App\Bundle\CoreBundle\Entity\Product
+            form: App\Bundle\CoreBundle\Form\ProductType
