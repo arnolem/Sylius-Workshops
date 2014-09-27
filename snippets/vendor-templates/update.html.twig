@@ -1,0 +1,25 @@
+{% extends 'SyliusWebBundle:Backend:layout.html.twig' %}
+
+{% from 'SyliusResourceBundle:Macros:actions.html.twig' import update %}
+
+{% block topbar %}
+<ol class="breadcrumb">
+    <li>{{ 'sylius.breadcrumb.assortment'|trans }}</li>
+    <li><a href="{{ path('app_backend_vendor_index') }}">{{ 'Vendors'|trans }}</a></li>
+    <li>{{ 'sylius.breadcrumb.edit'|trans }}</li>
+</ol>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1><i class="glyphicon glyphicon-pencil"></i> {{ 'Edit Vendor'|trans|raw }}</h1>
+</div>
+
+{{ form_errors(form) }}
+
+<form action="{{ path('app_backend_vendor_update', {'id': vendor.id}) }}" method="post" class="form-horizontal" novalidate>
+    <input type="hidden" name="_method" value="PUT">
+    {% include 'AppWebBundle:Backend/Vendor:_form.html.twig' %}
+    {{ update() }}
+</form>
+{% endblock %}
